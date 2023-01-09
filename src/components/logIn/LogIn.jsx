@@ -1,5 +1,3 @@
-import React from 'react'
-
 import leave1 from '../../images/leave1.svg'
 import leave4 from '../../images/leave4.svg'
 
