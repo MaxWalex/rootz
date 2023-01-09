@@ -1,5 +1,6 @@
 import FirstScreen from '../firstScreen/FirstScreen';
 import OurTeam from '../ourTeam/OurTeam';
+import LogIn from '../logIn/LogIn';
 
 import './App.scss';
 
@@ -8,6 +9,7 @@ function App() {
     <>
       <FirstScreen />
       <OurTeam />
+      <LogIn />
     </>
   );
 }
