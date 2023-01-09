@@ -1,8 +1,10 @@
+@import '../../styles/global.scss';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -22,8 +24,20 @@ ul, li, ol {
   padding: 0;
 }
 
+input, textarea {
+  font-family: inherit;
+}
+
+.main_title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  color: #222433;
+  text-transform: capitalize;
+}
+
 .main_button {
-  background: #F2726C;
+  background: $colorPink;
   border-radius: 30px;
   text-transform: uppercase;
   color: #fff;
@@ -31,6 +45,11 @@ ul, li, ol {
   font-size: 13px;
   padding: 15px 32px;
   border: none;
+  font-family: inherit;
+  transition: 0.4s;
+  &:hover {
+    background-color: #ce625d;
+  }
 }
 
 .container_fluid,

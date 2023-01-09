@@ -1,3 +1,5 @@
+@import '../../styles/global.scss';
+
 .header_inner {
     display: flex;
     align-items: center;
@@ -31,5 +33,38 @@
     background-color: #fff;
     color: #000000;
     font-weight: 700;
+    transition: 0.4s;
+    &:hover {
+        background-color: $colorPink;
+        color: #fff;
+    }
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    &_svg {
+       position: relative; 
+       height: 32px;
+       top: -5px;
+       svg {
+        position: absolute;
+       }
+       &-1 {
+
+       }
+       &-2 {
+        transform: rotate(29deg);
+        bottom: -3px;
+        left: 8px;
+       }
+       &-3 {
+        transform: rotate(73deg);
+        bottom: -12px;
+        left: 15px;
+       }
+    }
+    &_svg-name {
+        padding-left: 50px;
+    }
+}

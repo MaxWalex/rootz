@@ -1,8 +1,13 @@
+@import '../../styles/global.scss';
+
 .first_screen {
     background: linear-gradient(0deg, #F7F3F4, #F7F3F4), linear-gradient(0deg, #FEBD2F, #FEBD2F), radial-gradient(178.57% 327.71% at 110.1% 3.35%, #FF605B 0%, #FFEE30 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #27D07D;
     padding: 32px 0 96px;
     &-inner {
-        padding-top: 70px;
+        padding-top: 126px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
     } 
     &-left {
         p {
@@ -41,6 +46,70 @@
         }
         button {
             cursor: pointer;
+        }
+    }
+
+    &-right {
+        position: relative;
+    }
+}
+
+.parrot {
+    & > img {
+        max-width: 340px;
+        width: 100%;
+    }
+    &_leaves {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        img {
+            position: absolute;
+        }
+        &-1 {
+            top: -70px;
+            right: 50px;
+        }
+        &-2 {
+            top: -20px;
+            right: -110px;
+        }
+        &-3 {
+            top: 140px;
+            right: -60px;
+        }
+        &-4 {
+            bottom: 180px;
+            right: 0px;
+        }
+        &-5 {
+            bottom: 128px;
+            right: 58px;
+        }
+    }
+    &_card {
+        width: 272px;
+        height: 320px;
+        position: absolute;
+        border-radius: 50px;
+        bottom: -70px;
+        left: -65px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 32px;
+        &-members {
+            p {
+                font-weight: 700;
+                font-size: 20px;
+                color: #fff;
+                &:last-child {
+                    font-size: 56px;
+                    line-height: 70px;
+                }
+            }
         }
     }
 }
