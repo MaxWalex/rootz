@@ -38,7 +38,7 @@ function Counter({ val, time }) {
     }
   
     return <p>{currVal.toDivide()}</p>;
-  }
+}
 
 
 function FirstScreenContent() {
@@ -46,35 +46,54 @@ function FirstScreenContent() {
 
     const handleOnMouseMove = e => {
         const leaves = parrotRef.current.querySelectorAll('.parrot_leaves img')
-        const parrot = parrotRef.current.querySelectorAll('.parrot img')
+        const parrot = parrotRef.current.querySelectorAll('.parrot')
+        const parrotCard = parrotRef.current.querySelectorAll('.parrot_card')
 
         leaves.forEach(layer => {
             const speed = layer.attributes[1].value;
 
-            const x = (window.innerWidth - e.pageX*speed)/70
-            const y = (window.innerHeight - e.pageY*speed)/70
+            const x = (window.innerWidth - e.pageX*speed)/100
+            const y = (window.innerHeight - e.pageY*speed)/100
+
+            layer.style.transform = `translate(${x}px, ${y}px)`
+        })
+
+        parrot.forEach(layer => {
+            const speed = layer.attributes[1].value;
+
+            const x = (window.innerWidth - e.pageX*speed)/100
+            const y = (window.innerHeight - e.pageY*speed)/100
+
+            layer.style.transform = `translate(${x}px, ${y}px)`
+        })
+
+        parrotCard.forEach(layer => {
+            const speed = layer.attributes[1].value;
+
+            const x = (window.innerWidth - e.pageX * speed)/100
+            const y = (window.innerHeight - e.pageY * speed)/100
 
             layer.style.transform = `translate(${x}px, ${y}px)`
         })
     }
 
   return (
-    <div className='container'>
+    <div className='container' onMouseMove={e => handleOnMouseMove(e)}>
             <div className='first_screen-inner'>
                 <FirstScreenLeft />
 
-                <div className='first_screen-right' ref={parrotRef} onMouseMove={e => handleOnMouseMove(e)}>
-                    <div className='parrot'>
+                <div className='first_screen-right' ref={parrotRef} >
+                    <div className='parrot' data-speed="8">
                         <img src={parrot} />
                     </div>
                     <div className='parrot_leaves'>
-                        <img src={leave1} data-speed="-5" className='parrot_leaves-1' />
-                        <img src={leave2} data-speed="5" className='parrot_leaves-2' />
-                        <img src={leave3} data-speed="-2" className='parrot_leaves-3' />
-                        <img src={leave4} data-speed="8" className='parrot_leaves-4' />
-                        <img src={leave5} data-speed="4" className='parrot_leaves-5' />
+                        <img src={leave1} data-speed="-3" className='parrot_leaves-1' />
+                        <img src={leave2} data-speed="2" className='parrot_leaves-2' />
+                        <img src={leave3} data-speed="-5" className='parrot_leaves-3' />
+                        <img src={leave4} data-speed="6" className='parrot_leaves-4' />
+                        <img src={leave5} data-speed="-1" className='parrot_leaves-5' />
                     </div>
-                    <div className='parrot_card' style={{
+                    <div className='parrot_card' data-speed="-4" style={{
                         backgroundImage: `url(${parrotBlock})`
                     }}>
                         <div className='parrot_card-icon'>
