@@ -50,7 +50,7 @@ function Carousel() {
     ]
 
   return (
-    <section className='carousel' id="places">
+    <section className='carousel' id="places" data-aos="fade-up" data-aos-duration="1500">
         <Swiper 
             slidesPerView={4.5}
             centeredSlides={true}

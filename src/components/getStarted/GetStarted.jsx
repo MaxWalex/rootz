@@ -31,9 +31,11 @@ function GetStarted() {
         <div className="container">
             <div className='get_started-inner'>
                 <div className='get_started-left'>
-                    <h2 className='main_title'>Ready to Get started?</h2>
-                    <p>When pattern is mentioned in interior design, it is easy to asso- ciate it with a geometric patterned wallpaper or colourful prints on interior fabrics.</p>
-                    <a href="#" className='main_button'>Contact Us</a>
+                    <h2 className='main_title' data-aos="fade-right" data-aos-duration="1000">Ready to Get started?</h2>
+                    <p data-aos="fade-right" data-aos-duration="1300">When pattern is mentioned in interior design, it is easy to asso- ciate it with a geometric patterned wallpaper or colourful prints on interior fabrics.</p>
+                    <div className='main_buttun-wrapp' data-aos="fade-right" data-aos-duration="1500">
+                        <a href="#" className='main_button'>Contact Us</a>
+                    </div>
                 </div>
                 <div className='get_started-right'>
                     {accordContent}

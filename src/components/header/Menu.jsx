@@ -13,10 +13,10 @@ function Menu() {
   ]
 
   return (
-    <nav>
+    <nav data-aos="fade-down" data-aos-duration="1500">
       <ul>
         {menu.map(({name, isActive, id, link}) => {
-          return <li key={id} className={isActive ? 'active' : ''}><a href={link}>{name}</a></li>
+          return <li key={id} className={isActive ? 'active' : ''}><a href='#'>{name}</a></li>
         })}
       </ul>
     </nav>

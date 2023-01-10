@@ -5,12 +5,12 @@ function Footer() {
     <footer>
         <div className="container_footer">
             <div className="footer_inner">
-                <div className="footer_contacts footer_item">
+                <div className="footer_contacts footer_item" data-aos="fade-right" data-aos-duration="1000">
                     <h3 className=''>Contacts</h3>
                     <p>2019 Rootz Foundation. All rights reserved</p>
                 </div>
 
-                <div className="footer_side footer_item">
+                <div className="footer_side footer_item" data-aos="fade-up" data-aos-duration="1300">
                     <h4 className='footer_title'>Headquarters</h4>
                     <ul>
                         <li>1234 Taliban</li>
@@ -19,7 +19,7 @@ function Footer() {
                     </ul>
                 </div>
 
-                <div className="footer_socials footer_item">
+                <div className="footer_socials footer_item" data-aos="fade-left" data-aos-duration="1500">
                     <h4 className='footer_title'>Social media</h4>
                     <ul>
                         <li>

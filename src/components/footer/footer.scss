@@ -56,6 +56,10 @@ footer {
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    transition: 0.4s;
+                    &:hover {
+                        background-color: #F2726C;
+                    }
                 }
             }
         }

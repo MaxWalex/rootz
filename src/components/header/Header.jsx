@@ -10,7 +10,9 @@ function Header() {
             <div className='header_inner'>
                 <Logo />
                 <Menu />
-                <a href="#" className='header_button'>Apply</a> 
+                <div className='header_button-wrapp' data-aos="fade-left" data-aos-duration="1500">
+                  <a href="#" className='header_button'>Apply</a> 
+                </div>
             </div>   
         </div>
     </header>

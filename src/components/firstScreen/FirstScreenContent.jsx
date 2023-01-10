@@ -65,7 +65,7 @@ function FirstScreenContent() {
     }
 
   return (
-    <div className='container' onMouseMove={e => handleOnMouseMove(e)}>
+    <div className='container' onMouseMove={e => handleOnMouseMove(e)} data-aos="fade-up">
             <div className='first_screen-inner'>
                 <FirstScreenLeft />
 

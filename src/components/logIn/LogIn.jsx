@@ -54,10 +54,11 @@ function LogIn() {
         <div className="container">
             <div className="login_inner" ref={logInRef} onMouseMove={e => handleOnMouseMove(e)}>
                 <div className="login_left">
-                    <h2 className='main_title'>Get started today!</h2>
-                    <p>Learn more about how you can save our planet's nature. From smart consumption to switching to renewable energy, each of us can do our part to save the planet. </p>
+                    <h2 className='main_title' data-aos="fade-right" data-aos-duration="1000">Get started today!</h2>
+                    <p data-aos="fade-right" data-aos-duration="1500">Learn more about how you can save our planet's nature. From smart consumption to switching to renewable energy, each of us can do our part to save the planet. </p>
                 </div>
-                <div className="login_right">
+
+                <div className="login_right" data-aos="fade-left" data-aos-duration="1500">
                     <form onSubmit={e => handleSubmit(e)}>
                         <h3 className='main_title'>Log In</h3>
 
