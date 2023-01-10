@@ -4,7 +4,7 @@ function Accordeon({name, content}) {
     const [isActive, setIsActive] = useState(false);
 
   return (
-    <div data-aos="fade-left" data-aos-duration="1500" className={`get_started-item ${isActive ? 'opened' : ''}`}>
+    <div className={`get_started-item ${isActive ? 'opened' : ''}`}>
         <div className='get_started-item_top' onClick={() => setIsActive(!isActive)}>
             <h3 className='main_title'>{name}</h3>
             <div className='get_started-item_top-btn'></div>

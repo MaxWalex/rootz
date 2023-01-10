@@ -37,7 +37,7 @@ function GetStarted() {
                         <a href="#" className='main_button'>Contact Us</a>
                     </div>
                 </div>
-                <div className='get_started-right'>
+                <div className='get_started-right' data-aos="fade-left" data-aos-duration="1500">
                     {accordContent}
                 </div>
             </div>
