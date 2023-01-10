@@ -52,10 +52,11 @@ function Carousel() {
   return (
     <section className='carousel'>
         <Swiper 
-            slidesPerView={5}
+            slidesPerView={5.5}
             createElements={true}
             centeredSlides={true}
             loop={true}
+            // spaceBetween={52} 
             navigation={{
                 prevEl: navigationPrevRef.current,
                 nextEl: navigationNextRef.current,
