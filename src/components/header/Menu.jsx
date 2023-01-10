@@ -1,6 +1,10 @@
 import React from 'react'
 
+// import { useScrollspy } from '../../hooks/useScrollspy';
+
 function Menu() {
+  // const sectionActive = useScrollspy(['home', 'mission', 'places', 'team'], 300)
+
   const menu = [
     {name: 'Home', isActive: true, id: 1, link: '#home'},
     {name: 'Our mission', isActive: false, id: 2, link: '#mission'},

@@ -37,8 +37,8 @@ export const useScrollspy = (ids, offset = 0) => {
             window.removeEventListener("resize", listener);
             window.removeEventListener("scroll", listener);
         };
+
     }, [ids, offset]);
 
-    console.log(activeId)
     return activeId;
 };
