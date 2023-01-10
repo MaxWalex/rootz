@@ -3,6 +3,7 @@ import OurTeam from '../ourTeam/OurTeam';
 import LogIn from '../logIn/LogIn';
 import GetStarted from '../getStarted/GetStarted';
 import Carousel from '../carousel/Carousel';
+import Footer from '../footer/Footer';
 
 import './App.scss';
 
@@ -14,6 +15,7 @@ function App() {
       <LogIn />
       <GetStarted />
       <Carousel />
+      <Footer />
     </>
   );
 }
