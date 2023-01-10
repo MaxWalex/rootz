@@ -7,6 +7,7 @@ import slide2 from '../../images/slide2.png';
 import slide3 from '../../images/slide3.png';
 import slide4 from '../../images/slide4.png';
 import slide5 from '../../images/slide5.png';
+import slideBg from '../../images/slideBg.png';
 
 import 'swiper/css';
 import './carousel.scss';
@@ -73,8 +74,11 @@ function Carousel() {
                                 <img src={img} />
                             </div>
                             <div className='swiper_slide-desc'>
-                                <p>{name}</p>
-                                <p>{text}</p>
+                                <div className='swiper_slide-desc_block'>
+                                    <h3 className='main_title'>{name}</h3>
+                                    <p>{text}</p>
+                                </div>
+                                <img src={slideBg} />
                             </div>
                         </SwiperSlide>
             })}
