@@ -26,7 +26,7 @@ function Counter({ val, time }) {
         let number = '';
     
         for(var i = int.length - 1; i >= 0; i--) {
-            if(space == 3) {
+            if(space === 3) {
                 number = ' ' + number;
                 space = 0;
             }
@@ -40,7 +40,6 @@ function Counter({ val, time }) {
     return <p>{currVal.toDivide()}</p>;
 }
 
-
 function FirstScreenContent() {
     const parrotRef = useRef()
 
@@ -49,32 +48,20 @@ function FirstScreenContent() {
         const parrot = parrotRef.current.querySelectorAll('.parrot')
         const parrotCard = parrotRef.current.querySelectorAll('.parrot_card')
 
-        leaves.forEach(layer => {
-            const speed = layer.attributes[1].value;
+        const parallax = (data) => {
+            data.forEach(layer => {
+                const speed = layer.attributes[1].value;
+    
+                const x = (window.innerWidth - e.pageX*speed)/100
+                const y = (window.innerHeight - e.pageY*speed)/100
+    
+                layer.style.transform = `translate(${x}px, ${y}px)`
+            })
+        }
 
-            const x = (window.innerWidth - e.pageX*speed)/100
-            const y = (window.innerHeight - e.pageY*speed)/100
-
-            layer.style.transform = `translate(${x}px, ${y}px)`
-        })
-
-        parrot.forEach(layer => {
-            const speed = layer.attributes[1].value;
-
-            const x = (window.innerWidth - e.pageX*speed)/100
-            const y = (window.innerHeight - e.pageY*speed)/100
-
-            layer.style.transform = `translate(${x}px, ${y}px)`
-        })
-
-        parrotCard.forEach(layer => {
-            const speed = layer.attributes[1].value;
-
-            const x = (window.innerWidth - e.pageX * speed)/100
-            const y = (window.innerHeight - e.pageY * speed)/100
-
-            layer.style.transform = `translate(${x}px, ${y}px)`
-        })
+        parallax(leaves)
+        parallax(parrot)
+        parallax(parrotCard)
     }
 
   return (
