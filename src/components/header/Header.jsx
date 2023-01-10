@@ -1,9 +1,12 @@
 import Logo from './Logo';
 import Menu from './Menu';
 
+import { useScrollspy } from '../../hooks/useScrollspy';
+
 import './header.scss';
 
 function Header() {
+  useScrollspy(['#home', '#mission'], 100)
   return (
     <header>
         <div className='container_fluid'>

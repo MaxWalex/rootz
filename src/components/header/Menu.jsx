@@ -11,8 +11,8 @@ function Menu() {
   return (
     <nav>
       <ul>
-        {menu.map(({name, isActive, id}) => {
-          return <li key={id} className={`${isActive}`}><a href="#">{name}</a></li>
+        {menu.map(({name, isActive, id, link}) => {
+          return <li key={id} className={isActive ? 'active' : ''}><a href={link}>{name}</a></li>
         })}
       </ul>
     </nav>

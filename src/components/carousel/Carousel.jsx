@@ -50,7 +50,7 @@ function Carousel() {
     ]
 
   return (
-    <section className='carousel'>
+    <section className='carousel' id="places">
         <Swiper 
             slidesPerView={4.5}
             centeredSlides={true}

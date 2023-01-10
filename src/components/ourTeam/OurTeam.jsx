@@ -8,7 +8,7 @@ import './ourteam.scss';
 
 function OurTeam() {
   return (
-    <section className='team'>
+    <section className='team' id="team">
         <div className="container">
             <div className='team_inner'>
                 <div className='team_top'>

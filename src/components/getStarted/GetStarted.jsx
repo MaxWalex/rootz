@@ -3,7 +3,7 @@ import Accordeon from './Accordeon';
 import './getStarted.scss';
 
 function GetStarted() {
-
+    
     const accordionData = [
         {
             name: 'What can I do to protect our planet?',
@@ -27,7 +27,7 @@ function GetStarted() {
     })
 
   return (
-    <section className='get_started'>
+    <section className='get_started' id="mission">  
         <div className="container">
             <div className='get_started-inner'>
                 <div className='get_started-left'>
