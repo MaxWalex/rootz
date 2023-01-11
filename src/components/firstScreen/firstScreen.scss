@@ -545,3 +545,29 @@
         padding-top: 106px;
     }
 }
+
+@media (max-width: 860px) {
+    .first_screen-inner {
+        flex-direction: column;
+        padding-top: 70px;
+    }
+    .first_screen {
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            width: 100%;
+            max-width: 420px;
+            margin: 0 auto;
+            margin-top: 100px;  
+            .parrot {
+                text-align: right;
+                margin-right: 50px;
+                &_card {
+                    left: -40px;
+                    bottom: 30px;
+                }
+            }
+        }
+    }
+}
