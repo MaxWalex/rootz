@@ -49,6 +49,7 @@ input, textarea {
 }
 
 .main_button {
+  display: inline-block;
   cursor: pointer;
   background: $colorPink;
   border-radius: 30px;
