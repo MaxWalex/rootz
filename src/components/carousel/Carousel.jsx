@@ -49,9 +49,25 @@ function Carousel() {
         }
     ]
 
+    const breakpoints = {
+        320: {
+            slidesPerView: 1,
+        },
+        560: {
+            slidesPerView: 2,
+        },
+        1000: {
+            slidesPerView: 3.5,
+        },
+        1200: {
+            slidesPerView: 4.5,
+        },
+    }
+
   return (
     <section className='carousel' id="places" data-aos="fade-up" data-aos-duration="1500">
         <Swiper 
+            breakpoints={breakpoints}
             slidesPerView={4.5}
             centeredSlides={true}
             loop={true}
