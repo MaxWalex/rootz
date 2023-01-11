@@ -23,7 +23,7 @@ function Menu({toggleMenu}) {
       <ul>
         {menuContent}
       </ul>
-      <a href="#" class="header_button">Apply</a>
+      <a href="#" className="header_button">Apply</a>
     </nav>
   )
 }
