@@ -130,3 +130,8 @@
     }
 }
 
+@media (max-width: 550px) {
+    .carousel .swiper-slide-duplicate.swiper-slide-active .swiper_slide-wrapper .swiper_slide-desc, .carousel .swiper-slide.swiper-slide-active .swiper_slide-wrapper .swiper_slide-desc {
+        left: 0;
+    }
+}
