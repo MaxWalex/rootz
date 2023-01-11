@@ -40,14 +40,6 @@
               margin-top: 16px;  
             }
         }
-        .input {
-            &_name {
-                
-            }
-            &_email {
-
-            }
-        }
         .danger_text {
             text-align: left;
         }
@@ -73,5 +65,23 @@
                 right: -18px;
             }
         }
+    }
+}
+
+@media (max-width: 1000px) {
+    .login_inner {
+        padding: 59px 55px 79px 60px;
+    }
+    .login_right {
+        padding: 20px 35px;
+    }
+}
+
+@media (max-width: 800px) {
+    .login_inner {
+        flex-direction: column;
+    }
+    .login_right {
+        margin-top: 40px;
     }
 }
