@@ -1,4 +1,4 @@
-function Menu() {
+function Menu({toggleMenu}) {
 
   const menu = [
     {name: 'Home', isActive: true, id: 1, aosDelay: '300'},
@@ -19,7 +19,7 @@ function Menu() {
                         })
 
   return (
-    <nav>
+    <nav className={toggleMenu ? 'active' : ''}>
       <ul>
         {menuContent}
       </ul>
