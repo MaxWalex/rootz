@@ -7,6 +7,7 @@ footer {
     max-width: 1097px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 30px;
 }
 
 .footer {
@@ -63,5 +64,41 @@ footer {
                 }
             }
         }
+    }
+}
+
+@media (max-width: 640px) {
+    .footer_inner {
+        display: grid;
+        grid-template-areas: 
+                    "a a"
+                    "b c";
+        grid-gap: 30px;
+    }
+    .footer_contacts {
+        grid-area: a;
+        max-width: 100%;
+    }
+    .footer_side {
+        grid-area: b;
+    }
+    .footer_socials {
+        grid-area: c;
+    }
+    footer {
+        padding: 43px 0;
+    }
+    .footer_item h3 {
+        font-size: 28px;
+        line-height: 48px;
+        margin-bottom: 0;
+    }
+    .footer_item h4 {
+        font-size: 18px;
+        line-height: 32px;
+        margin-bottom: 15px;
+    }
+    .footer_item li, .footer_item p {
+        font-size: 12px;
     }
 }
