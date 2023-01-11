@@ -574,3 +574,41 @@
         }
     }
 }
+
+@media (max-width: 500px) {
+    .first_screen-left svg {
+        width: 100%;
+        height: auto;
+    }
+    .first_screen-left p {
+        font-size: 15px;
+    }
+    .first_screen-right {
+        margin-top: -170px;
+        transform: translateY(70%);
+    }
+    .parrot img {
+        transform: translateX(36%);
+    }
+    .parrot_leaves {
+        right: -170px;
+        top: 0;
+    }
+    .first_screen-right .parrot {
+        margin-right: 0;
+    }
+    .first_screen-right .parrot_card {
+        height: 255px;
+        left: 30px;
+        bottom: 140px;
+    }
+    .parrot_card {
+        padding: 30px;
+    }
+    .parrot_card-members p {
+        font-size: 15px;
+    }
+    .parrot_card-members p:last-child {
+        line-height: 40px;
+    }
+}
