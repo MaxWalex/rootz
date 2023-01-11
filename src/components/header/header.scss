@@ -27,7 +27,8 @@ header {
             }
             a {
                 color: #000;
-                line-height: 32px
+                line-height: 32px;
+                transition: 0.4s;
             }
         }
     }
@@ -57,9 +58,12 @@ header {
     &_svg {
        position: relative; 
        height: 32px;
+       width: 32px;
        top: -5px;
+       transition: 0.5s;
        svg {
         position: absolute;
+        transition: 0.5s;
        }
        &-1 {
 
@@ -76,6 +80,32 @@ header {
        }
     }
     &_svg-name {
-        padding-left: 50px;
+        padding-left: 20px;
+        transition: 1s;
+    }
+    &:hover {
+        .logo_svg svg  {
+            width: 10px;
+        }
+        .logo_svg-1 {
+            top: 0;
+            left: 0;
+        }
+        .logo_svg {
+            transform: rotate(250deg);
+        }
+        .logo_svg-2 {
+            transform: rotate(111deg);
+            bottom: -20px;
+            left: 15px;
+        }
+        .logo_svg-3 {
+            transform: rotate(236deg);
+            bottom: -25px;
+            left: -9px;
+        }
+        .logo_svg-name {
+            padding-left: 40px;
+        }
     }
 }
