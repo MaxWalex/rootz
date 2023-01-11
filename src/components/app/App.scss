@@ -7,16 +7,20 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+  &.lock {
+    overflow: hidden;
+  }
+}
+
 body {
+  overflow: hidden;
   font-size: 16px;
   line-height: 24px;
   color: #1E1A20;
   font-family: 'Poppins', sans-serif;
   background-color: #E5E5E5;
-  overflow-x: hidden;
-  &.lock {
-    overflow: hidden;
-  }
 }
 
 a {

@@ -11,7 +11,7 @@ function Header() {
   const handleMenu = () => {
     setToggleMenu(!toggleMenu)
 
-    document.body.classList.toggle('lock')
+    document.querySelector('html').classList.toggle('lock')
 
   }
 
