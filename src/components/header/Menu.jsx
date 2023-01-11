@@ -7,20 +7,23 @@ function Menu() {
     {name: 'Team', isActive: false, id: 4, aosDelay: '1100'}
   ]
 
+  const menuContent = menu.map(({name, isActive, id, aosDelay}) => {
+                          return <li 
+                                    data-aos="fade-down" 
+                                    data-aos-duration="1500" 
+                                    data-aos-delay={aosDelay} 
+                                    key={id} 
+                                    className={isActive ? 'active' : ''}>
+                                      <a href='#'>{name}</a>
+                                    </li>
+                        })
+
   return (
     <nav>
       <ul>
-        {menu.map(({name, isActive, id, aosDelay}) => {
-          return <li 
-                    data-aos="fade-down" 
-                    data-aos-duration="1500" 
-                    data-aos-delay={aosDelay} 
-                    key={id} 
-                    className={isActive ? 'active' : ''}>
-                      <a href='#'>{name}</a>
-                    </li>
-        })}
+        {menuContent}
       </ul>
+      <a href="#" class="header_button">Apply</a>
     </nav>
   )
 }
