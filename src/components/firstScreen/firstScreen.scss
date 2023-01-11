@@ -554,6 +554,9 @@
     .first_screen {
         &-left {
             width: 100%;
+            &_block {
+                max-width: 100%;
+            }
         }
         &-right {
             width: 100%;
