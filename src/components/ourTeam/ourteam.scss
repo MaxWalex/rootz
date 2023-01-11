@@ -35,24 +35,26 @@
         }
     }
 }
-// .team_line {
-//     &-animate--2 {
-//         stroke-dasharray: 700;
-//         stroke-dashoffset: 700;
-//         animation: animdash 5s ease-in 1s;
-//         animation-fill-mode: forwards;
-//     }
-//     &-animate--1 {
-//         stroke-dasharray: 700;
-//         stroke-dashoffset: 700;
-//         animation: animdash 5s ease-in 1s;
-//         animation-fill-mode: forwards;
-//     }
-// }
 
-// @keyframes animdash {
-//     to {
-//         stroke-dashoffset: -1;
-//         stroke-dasharray: 6;
-//     }
-// }
+@media (max-width: 1000px) {
+    .team_item img {
+        width: 250px;
+    }
+    .line_first svg {
+        width: 350px;
+    }
+    .line_second svg {
+        width: 250px;
+    }
+    .login_right {
+        margin-left: 20px;
+        padding: 20px 25px;
+    }
+    .login_inner {
+        padding: 49px 55px 79px 60px;
+    }
+    .login_right .login_right-leaves img:first-child {
+        width: 52px;
+        top: -20px;
+    }
+}
