@@ -612,3 +612,9 @@
         line-height: 40px;
     }
 }
+
+@media (max-width: 410px) {
+    .first_screen-right .parrot_card {
+        left: 0;    
+    }
+}
