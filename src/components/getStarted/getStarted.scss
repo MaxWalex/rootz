@@ -105,3 +105,26 @@
         margin-top: 48px;
     }
 }
+
+@media (max-width: 500px) {
+    .get_started {
+        h2 {
+            font-size: 28px;
+            line-height: 150%;
+        }
+    }
+    .get_started-left p {
+        margin: 20px 0 32px;   
+    }
+    .get_started-right {
+        margin-top: 48px;
+        h3 {
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+    .get_started-item_content {
+        font-size: 15px;
+        line-height: 175%;
+    }
+}
