@@ -64,6 +64,26 @@ function Carousel() {
         },
     }
 
+    const slides = carouselData.map(({name, text, img, id}) => {
+        return <SwiperSlide 
+                    key={id}>
+                    <div className='swiper_slide-wrapper'>
+                    <div className='swiper_slide-img'>
+                        <h3 className='main_title'>{name}</h3>
+                        <img src={img} />
+                    </div>
+                    <div className='swiper_slide-desc'>
+                        <div className='swiper_slide-desc_block'>
+                            <h3 className='main_title'>{name}</h3>
+                            <p>{text}</p>
+                        </div>
+                        <img src={slideBg} />
+                    </div>
+                    </div>
+                    
+                </SwiperSlide>
+    })
+
   return (
     <section className='carousel' id="places" data-aos="fade-up" data-aos-duration="1500">
         <Swiper 
@@ -86,26 +106,7 @@ function Carousel() {
             }}
             modules={[Navigation, Pagination]}
         >
-            {carouselData.map(({name, text, img, id}) => {
-                return <SwiperSlide 
-                            key={id}>
-                            <div className='swiper_slide-wrapper'>
-                            <div className='swiper_slide-img'>
-                                <h3 className='main_title'>{name}</h3>
-                                <img src={img} />
-                            </div>
-                            <div className='swiper_slide-desc'>
-                                <div className='swiper_slide-desc_block'>
-                                    <h3 className='main_title'>{name}</h3>
-                                    <p>{text}</p>
-                                </div>
-                                <img src={slideBg} />
-                            </div>
-                            </div>
-                            
-                        </SwiperSlide>
-            })}
-
+            {slides}
 
             <div className='swiper_custom-arrows'>
                 <div ref={navigationPrevRef} className='swiper_custom-arrow_left'>

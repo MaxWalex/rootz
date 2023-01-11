@@ -1,9 +1,7 @@
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 
-import FirstScreenLeft from './FirstScreenLeft';
-
-import parrot from '../../images/parrot.png';
 import parrotBlock from '../../images/parrotCard.png';
+import parrot from '../../images/parrot.png';
 import leave1 from '../../images/leave1.svg';
 import leave2 from '../../images/leave2.svg';
 import leave3 from '../../images/leave3.svg';
@@ -16,12 +14,12 @@ function Counter({ val, time }) {
     useEffect(() => {
       currVal !== val && setTimeout(setCurrVal, time, currVal + 1);
     }, [ currVal ]);
-
+  
     Number.prototype.toDivide = function() {
         let int = String(Math.trunc(this))
-
+  
         if(int.length <= 3) return int;
-
+  
         let space = 0;
         let number = '';
     
@@ -38,38 +36,11 @@ function Counter({ val, time }) {
     }
   
     return <p>{currVal.toDivide()}</p>;
-}
+  }
 
-function FirstScreenContent() {
-    const parrotRef = useRef()
-
-    const handleOnMouseMove = e => {
-        const leaves = parrotRef.current.querySelectorAll('.parrot_leaves img')
-        const parrot = parrotRef.current.querySelectorAll('.parrot')
-        const parrotCard = parrotRef.current.querySelectorAll('.parrot_card')
-
-        const parallax = (data) => {
-            data.forEach(layer => {
-                const speed = layer.attributes[1].value;
-    
-                const x = (window.innerWidth - e.pageX*speed)/100
-                const y = (window.innerHeight - e.pageY*speed)/100
-    
-                layer.style.transform = `translate(${x}px, ${y}px)`
-            })
-        }
-
-        parallax(leaves)
-        parallax(parrot)
-        parallax(parrotCard)
-    }
-
+function FirstScreenRight({parrotRef}) {
   return (
-    <div className='container' onMouseMove={e => handleOnMouseMove(e)} data-aos="fade-up">
-            <div className='first_screen-inner'>
-                <FirstScreenLeft />
-
-                <div className='first_screen-right' ref={parrotRef} >
+    <div className='first_screen-right' ref={parrotRef} >
                     <div className='parrot' data-speed="8">
                         <img src={parrot} />
                     </div>
@@ -94,10 +65,7 @@ function FirstScreenContent() {
                         </div>
                     </div>
                 </div>
-                
-            </div>
-        </div>
   )
 }
 
-export default FirstScreenContent
+export default FirstScreenRight
