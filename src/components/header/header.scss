@@ -147,7 +147,7 @@ header {
             ul {
                 flex-direction: column;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-start;
                 li {
                     transform: translate(0,0);
                     opacity: 1 !important;
@@ -205,6 +205,10 @@ header {
             }
         }   
     }
+}
+
+@media (max-height: 600px) {
+    
 }
 
 @media (max-width: 500px) {
