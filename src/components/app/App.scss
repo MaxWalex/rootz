@@ -14,6 +14,9 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: #E5E5E5;
   overflow-x: hidden;
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 a {
@@ -70,4 +73,10 @@ input, textarea {
 
 .container_fluid {
   max-width: 1280px;
+}
+
+@media (max-width: 500px) {
+  body {
+    background-color: #fff;
+  }
 }
