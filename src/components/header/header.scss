@@ -65,9 +65,6 @@ header {
         position: absolute;
         transition: 0.5s;
        }
-       &-1 {
-
-       }
        &-2 {
         transform: rotate(29deg);
         bottom: -3px;
@@ -107,5 +104,12 @@ header {
         .logo_svg-name {
             padding-left: 40px;
         }
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .header_inner nav ul li + li {
+        margin-left: 40px;
     }
 }

@@ -504,3 +504,44 @@
     -webkit-animation: animate-svg-fill-15 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) 1.8000000000000003s both;
     animation: animate-svg-fill-15 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) 1.8000000000000003s both;
 }
+
+
+
+@media (max-width: 1400px) {
+    .parrot_leaves {
+        &-1 {
+            top: -90px;
+            right: 170px;
+        }
+        &-2 {
+            top: 10px;
+            right: -10px;
+        }
+        &-3 {
+            right: 90px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .parrot_card {
+        width: 210px;
+        height: 280px;
+    }
+    .parrot_card-members p:last-child {
+        font-size: 40px;
+        line-height: 60px;
+    }
+    .parrot > img {
+        max-width: 290px;
+    }
+    .first_screen-left svg {
+        width: 450px;
+    }
+    .first_screen-left p {
+        margin: 40px 0 28px;
+    }
+    .first_screen-inner {
+        padding-top: 106px;
+    }
+}
